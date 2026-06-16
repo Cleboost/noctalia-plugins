@@ -4,56 +4,34 @@
 # host re-reads it on enable. Keep one [[plugin]] row per plugin subdirectory.
 
 [[plugin]]
-id = "noctalia/example"
-name = "Example"
-version = "1.0.1"
-author = "noctalia"
-license = "MIT"
-icon = "puzzle"
-description = "A minimal reference plugin: a bar widget with settings, click handling, and IPC."
-min_noctalia = "5.0.0"
-tags = ["example", "demo"]
-
-[[plugin]]
-id = "noctalia/screen_recorder"
-name = "Screen Recorder"
-version = "1.1.5"
-author = "noctalia"
-license = "MIT"
-icon = "video"
-description = "Record the screen with gpu-screen-recorder."
-min_noctalia = "5.0.0"
-tags = ["recording", "screen", "video"]
-
-[[plugin]]
-id = "noctalia/bongocat"
-name = "Bongo Cat"
-version = "1.0.1"
-author = "noctalia"
-license = "MIT"
-icon = "cat"
-description = "A cat that slaps your bar when you type or to the beat."
-min_noctalia = "5.0.0"
-tags = ["fun", "animation", "cat"]
-
-[[plugin]]
-id = "noctalia/translator"
-name = "Translator"
-version = "1.0.1"
-author = "noctalia"
-license = "MIT"
-icon = "language"
-description = "Translate text from the launcher via Google Translate. Type `/tr <lang> <text>`."
-min_noctalia = "5.0.0"
-tags = ["translate", "language", "launcher"]
-
-[[plugin]]
-id = "noctalia/timer"
-name = "Timer"
+id = "noctalia/mechsound"
+name = "Mechanical Sounds"
 version = "1.0.0"
-author = "noctalia"
+author = "cleboost"
 license = "MIT"
-icon = "clock"
-description = "A countdown timer desktop widget with start/pause and reset."
+icon = "volume-up"
+description = "Simulates keyboard typing sounds with customizable mechanical switch soundpacks."
 min_noctalia = "5.0.0"
-tags = ["timer", "countdown", "desktop"]
+tags = ["utility", "audio", "keyboard"]
+
+[[plugin]]
+id = "cleboost/test-plugin"
+name = "Test Plugin"
+version = "1.0.0"
+author = "cleboost"
+license = "MIT"
+icon = "flask"
+description = "Plugin de test pour vérifier que tout fonctionne."
+min_noctalia = "5.0.0"
+tags = ["test", "demo"]
+
+[[plugin]]
+id = "cleboost/zed-projects"
+name = "Zed Projects"
+version = "1.0.0"
+author = "cleboost"
+license = "MIT"
+icon = "folder-open"
+description = "Open a recent Zed project from the launcher. Type /zed to list your projects."
+min_noctalia = "5.0.0"
+tags = ["zed", "launcher", "projects"]
