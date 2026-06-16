@@ -1,0 +1,20 @@
+id = "cleboost/test-plugin"
+name = "Test Plugin"
+version = "1.0.0"
+min_noctalia = "5.0.0"
+author = "cleboost"
+license = "MIT"
+tags = ["test", "demo"]
+icon = "flask"
+description = "Plugin de test pour vérifier que tout fonctionne."
+
+[[widget]]
+id = "hello"
+entry = "hello.luau"
+
+  [[widget.setting]]
+  key = "label"
+  type = "string"
+  label = "Label"
+  description = "Texte affiché dans la barre."
+  default = "Test OK"

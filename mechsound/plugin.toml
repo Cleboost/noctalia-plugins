@@ -1,0 +1,66 @@
+id = "noctalia/mechsound"
+name = "Mechanical Sounds"
+version = "1.0.0"
+min_noctalia = "5.0.0"
+author = "cleboost"
+license = "MIT"
+icon = "volume-up"
+description = "Simulates keyboard typing sounds with customizable mechanical switch soundpacks."
+tags = ["utility", "audio", "keyboard"]
+
+# Plugin-level configuration variables (Settings -> Plugins -> Mechanical Sounds)
+[[setting]]
+key = "input_device"
+type = "file"
+label = "Keyboard device"
+default = ""
+description = "/dev/input/eventN — requires membership in the input group. Find yours with 'ls -l /dev/input/by-id/'"
+
+[[setting]]
+key = "soundpack"
+type = "select"
+label = "Switch Soundpack"
+default = "mxbrown"
+options = [
+  { value = "alpacas", label = "Alpacas" },
+  { value = "blackink", label = "Gateron Black Inks" },
+  { value = "bluealps", label = "SKCM Blue Alps" },
+  { value = "boxnavy", label = "Kailh Box Navies" },
+  { value = "buckling", label = "Buckling Spring" },
+  { value = "cherrymxblue", label = "Cherry MX Blue" },
+  { value = "holypanda", label = "Holy Pandas" },
+  { value = "mxblack", label = "Cherry MX Black" },
+  { value = "mxblue", label = "Cherry MX Blue (Classic)" },
+  { value = "mxbrown", label = "Cherry MX Brown" },
+  { value = "nkcream2", label = "NK Creams" },
+  { value = "nkcream3", label = "NK Creams (MonkeyType)" },
+  { value = "osu", label = "osu! click" },
+  { value = "redink", label = "Gateron Red Inks" },
+  { value = "topre", label = "Topre" },
+  { value = "turquoise", label = "Turquoise Tealios" },
+  { value = "typewriter", label = "Typewriter" }
+]
+
+[[setting]]
+key = "play_keyup_sounds"
+type = "bool"
+label = "Play Keyup/Release Sounds"
+default = true
+
+[[setting]]
+key = "volume"
+type = "int"
+label = "Volume (% — dépasser 100 pour amplifier)"
+default = 150
+min = 10
+max = 400
+
+# Headless background service (captures evdev and plays audio)
+[[service]]
+id = "mechsound"
+entry = "mechsound.luau"
+
+# Minimal bar icon — needed for Noctalia to load the plugin. Click to mute/unmute.
+[[widget]]
+id = "widget"
+entry = "widget.luau"

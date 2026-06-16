@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    if: ${{ github.repository == 'noctalia-dev/official-plugins' }}
+    if: ${{ github.repository == 'Cleboost/noctalia-plugins' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

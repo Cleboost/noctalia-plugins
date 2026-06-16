@@ -1,0 +1,31 @@
+id = "cleboost/zed-projects"
+name = "Zed Projects"
+version = "1.0.0"
+min_noctalia = "5.0.0"
+author = "cleboost"
+license = "MIT"
+tags = ["zed", "launcher", "projects"]
+icon = "folder-open"
+description = "Open a recent Zed project from the launcher. Type /zed to list your projects."
+
+[[launcher_provider]]
+id = "projects"
+entry = "zed_projects.luau"
+prefix = "/zed"
+glyph = "bolt"
+include_in_global_search = false
+debounce_ms = 0
+
+[[launcher_provider.setting]]
+key = "db_path"
+type = "string"
+label = "Zed database path"
+description = "Path to Zed's db.sqlite file."
+default = "~/.local/share/zed/db/0-stable/db.sqlite"
+
+[[launcher_provider.setting]]
+key = "max_results"
+type = "number"
+label = "Maximum results"
+description = "Maximum number of projects to display."
+default = 20
